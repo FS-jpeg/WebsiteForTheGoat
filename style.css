@@ -1,0 +1,146 @@
+@font-face {
+  font-family: KingthingsExtortion;
+  src: url(KingthingsExtortion.ttf);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('Background.jpg');
+  background-size: cover;
+}
+
+#title {
+    display:flex;
+    margin: auto;
+}
+
+h1{
+    font-family: KingthingsExtortion;
+    color:rgb(20, 99, 151);
+    display:flex;
+    justify-content: space-around;
+}
+
+#TopRow {
+    display:flex;
+    justify-content: space-around;
+}
+
+#BottomRow {
+    display:flex;
+    justify-content: space-around;
+}
+
+.image-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-button:hover {
+    transform: scale(1.05);
+}
+
+.image-button img {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: transparent;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+.modal-card {
+    display: flex;
+    gap: 20px;
+    background: url('ScrapPaper.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+}
+
+.modal-text h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #1a1a1a;
+}
+
+.modal-text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
